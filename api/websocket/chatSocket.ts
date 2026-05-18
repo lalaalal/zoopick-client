@@ -2,8 +2,7 @@ import { BASE_URL } from "@/constants/url";
 import { useAuthStore } from "@/store/authStore";
 
 // http://lalaalal.com → ws://lalaalal.com (자동 변환)
-// https://lalaalal.com → wss://lalaalal.com (자동 변환)
-const WS_URL = BASE_URL.replace(/^http/, "ws") + "/ws/chat";
+const WS_URL = BASE_URL.replace(/^http(s)?/, "ws") + "/ws/chat";
 
 /**
  * WebSocket 연결 상태
